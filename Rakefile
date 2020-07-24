@@ -7,3 +7,11 @@ desc "Start our app console"
   task :console do
     Pry.start
   end
+
+  task :hello do 
+    puts "your rake test worked"
+  end 
+  #desc 'a description of your task'
+  # task :name_of_task do 
+  #code block 
+  #end 
