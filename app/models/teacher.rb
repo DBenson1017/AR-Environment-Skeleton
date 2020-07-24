@@ -1,6 +1,7 @@
 require 'pry'
 
 class Teacher < ActiveRecord::Base 
+   has_many :students #plural due many 
 
 def tenure 
    if self.years_of_experience > 5 
@@ -8,11 +9,14 @@ def tenure
     false 
    end  
 end 
+
+#Teacher.students is already created through AR and has_many 
 end 
 
 
 
 #DRAFT and NOTES 
+#none of this is needed because of AR and it's connetion to DB via ActiveRecord::Base
     # @@all =[]
     # attr_accessor :last_name, :grade_level, :years_of_experience 
 

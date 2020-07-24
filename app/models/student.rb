@@ -1,6 +1,8 @@
 require 'pry'
 
 class Student < ActiveRecord::Base 
+belongs_to :teacher #singular, belongs to one
+
     def full_name
         self.first_name + ' '+ self.last_name 
     end 
@@ -13,9 +15,9 @@ def self.all_in_grade(grade)
         end 
     end
 end 
-
 #did not create #grade_level method, as it already exists. Calling it will get a stack too deep error 
 #did not create .all method as it already exists 
+#Student.teacher is already created through AR 
 
 end 
 
@@ -26,7 +28,7 @@ end
 
 
 #DRAFT and NOTES 
-
+#none of this is needed because of AR and it's connetion to DB via ActiveRecord::Base
 
     # @@all =[]
     # attr_accessor :first_name, :last_name, :grade_level, :id 
